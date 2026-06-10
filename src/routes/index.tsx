@@ -349,11 +349,11 @@ function Testimonials() {
 function Pricing() {
   const plans = [
     {
-      name: "Starter", price: "R$ 497", sub: "ou 12x R$ 49", popular: false,
+      name: "Starter", price: "R$ 997", sub: "ou 12x R$ 83", popular: false,
       features: ["Acesso a todos os módulos", "Certificado de conclusão", "Comunidade Discord", "Acesso por 1 ano"],
     },
     {
-      name: "Pro", price: "R$ 997", sub: "ou 12x R$ 97", popular: true,
+      name: "Pro", price: "R$ 1.497", sub: "ou 12x R$ 125", popular: true,
       features: ["Tudo do Starter", "Mentorias ao vivo semanais", "Acesso vitalício", "Revisão de código 1:1", "Projetos extras de portfólio", "Sala VIP no Discord"],
     },
     {
