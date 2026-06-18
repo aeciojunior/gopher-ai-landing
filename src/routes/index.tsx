@@ -363,62 +363,37 @@ function Testimonials() {
 }
 
 function Pricing() {
-  const plans = [
-    {
-      name: "Starter", price: "R$ 997", sub: "ou 12x R$ 83", popular: false,
-      features: ["Acesso aos 12 módulos (130h+)", "Materiais e código-fonte", "Certificado de conclusão", "Comunidade no Discord", "Acesso por 1 ano"],
-    },
-    {
-      name: "Pro", price: "R$ 1.497", sub: "ou 12x R$ 125", popular: true,
-      features: ["Tudo do Starter", "Mentorias ao vivo semanais", "Acesso vitalício + atualizações", "Revisão de código 1:1", "Projeto final guiado (Kafka→ClickHouse)", "Sala VIP e suporte de carreira"],
-    },
-    {
-      name: "Empresa", price: "Sob consulta", sub: "para times 5+", popular: false,
-      features: ["Tudo do Pro", "Trilha personalizada", "Workshops in-company", "Relatórios de progresso", "Suporte dedicado e SLA", "Notas fiscais"],
-    },
-  ];
+  const methods = ["Cartão em 12x sem juros", "Pix", "Boleto", "PayPal"];
   return (
     <section id="precos" className="py-24 relative">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-14">
+      <div className="max-w-2xl mx-auto px-6">
+        <div className="text-center mb-12">
           <div className="text-xs font-mono uppercase tracking-widest text-accent mb-4">// investimento</div>
-          <h2 className="text-4xl md:text-5xl font-bold">Escolha seu <span className="text-gradient">plano</span></h2>
-          <p className="mt-4 text-muted-foreground">Acesso imediato após a confirmação do pagamento. Pix com 10% de desconto.</p>
+          <h2 className="text-4xl md:text-5xl font-bold">Um <span className="text-gradient">preço</span>. Curso completo.</h2>
+          <p className="mt-4 text-muted-foreground">Pagamento único com acesso a todo o conteúdo.</p>
         </div>
-        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {plans.map((p) => (
-            <div
-              key={p.name}
-              className={`relative rounded-2xl p-8 border ${p.popular ? "border-primary glow-ring" : "border-border"}`}
-              style={{ background: p.popular ? "var(--gradient-card)" : "transparent" }}
-            >
-              {p.popular && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground text-xs font-bold px-3 py-1 rounded-full">
-                  MAIS POPULAR
-                </div>
-              )}
-              <h3 className="font-display font-bold text-2xl">{p.name}</h3>
-              <div className="mt-4">
-                <div className="text-4xl font-display font-bold text-gradient">{p.price}</div>
-                <div className="text-sm text-muted-foreground mt-1">{p.sub}</div>
-              </div>
-              <ul className="mt-6 space-y-3">
-                {p.features.map((f) => (
-                  <li key={f} className="flex items-start gap-2 text-sm">
-                    <Check className="w-4 h-4 text-primary shrink-0 mt-0.5" /> {f}
-                  </li>
-                ))}
-              </ul>
-              <a
-                href="#inscricao"
-                className={`mt-8 block text-center rounded-full py-3 font-semibold transition ${
-                  p.popular ? "bg-primary text-primary-foreground hover:opacity-90" : "border border-border hover:bg-secondary"
-                }`}
-              >
-                Quero esse plano
-              </a>
-            </div>
-          ))}
+        <div className="relative rounded-3xl border border-primary glow-ring p-10 md:p-12 text-center" style={{ background: "var(--gradient-card)" }}>
+          <div className="text-sm text-muted-foreground">Curso completo · Go AI Developer</div>
+          <div className="mt-3 text-5xl md:text-6xl font-display font-bold text-gradient">R$ 1.497,00</div>
+          <div className="mt-3 text-lg text-muted-foreground">
+            em até <strong className="text-foreground">12x de R$ 124,75</strong> sem juros no cartão
+          </div>
+
+          <div className="mt-7 flex flex-wrap justify-center gap-2">
+            {methods.map((m) => (
+              <span key={m} className="inline-flex items-center gap-1.5 rounded-full border border-border bg-secondary px-3 py-1.5 text-xs text-foreground/90">
+                <CreditCard className="w-3.5 h-3.5 text-accent" /> {m}
+              </span>
+            ))}
+          </div>
+
+          <a href="#inscricao" className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-8 py-3.5 font-semibold hover:opacity-90 transition glow-ring">
+            <Rocket className="w-4 h-4" /> Garantir minha vaga
+          </a>
+
+          <div className="mt-6 flex items-center justify-center gap-2 text-xs text-muted-foreground">
+            <ShieldCheck className="w-4 h-4 text-accent" /> 7 dias de garantia incondicional · reembolso de 100%
+          </div>
         </div>
       </div>
     </section>
@@ -459,7 +434,7 @@ function FAQ() {
 }
 
 function Enroll() {
-  const [form, setForm] = useState({ name: "", email: "", phone: "", plan: "pro", payment: "card" });
+  const [form, setForm] = useState({ name: "", email: "", phone: "", payment: "card" });
   const [sent, setSent] = useState(false);
 
   const submit = (e: React.FormEvent) => {
@@ -481,8 +456,12 @@ function Enroll() {
                 Vagas limitadas a <strong className="text-foreground">80 alunos</strong> para garantir a qualidade
                 da mentoria. Início em <strong className="text-foreground">15 de julho</strong>.
               </p>
+              <div className="mt-6 rounded-2xl border border-primary/40 p-5">
+                <div className="text-3xl font-display font-bold text-gradient">R$ 1.497,00</div>
+                <div className="text-sm text-muted-foreground mt-1">em até 12x de R$ 124,75 sem juros no cartão</div>
+              </div>
               <ul className="mt-8 space-y-3 text-sm">
-                {["7 dias de garantia incondicional", "Pix com 10% de desconto", "Acesso liberado em até 5 min", "Suporte humano via WhatsApp"].map((b) => (
+                {["7 dias de garantia incondicional", "Acesso liberado em até 5 min", "Suporte humano via WhatsApp"].map((b) => (
                   <li key={b} className="flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-accent" />{b}</li>
                 ))}
               </ul>
@@ -512,13 +491,6 @@ function Enroll() {
                   </Field>
                   <Field label="WhatsApp">
                     <input required value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} className="go-input" placeholder="(11) 99999-9999" />
-                  </Field>
-                  <Field label="Plano">
-                    <select value={form.plan} onChange={(e) => setForm({ ...form, plan: e.target.value })} className="go-input">
-                      <option value="starter">Starter — R$ 997</option>
-                      <option value="pro">Pro — R$ 1.497 (recomendado)</option>
-                      <option value="empresa">Empresa — sob consulta</option>
-                    </select>
                   </Field>
                   <Field label="Forma de pagamento">
                     <div className="grid grid-cols-3 gap-2">
