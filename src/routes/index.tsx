@@ -180,7 +180,7 @@ function About() {
               "Pipeline real event-driven: Kafka → ClickHouse + dashboard",
               "Projetos reais publicados no seu GitHub",
               "Mentorias semanais ao vivo com o instrutor",
-              "Comunidade privada no Discord e certificado reconhecido",
+              "Grupo privado no Telegram e certificado reconhecido",
             ].map((t) => (
               <li key={t} className="flex items-center gap-3">
                 <span className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
