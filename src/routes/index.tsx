@@ -310,13 +310,38 @@ function Instructor() {
             </div>
             <div>
               <div className="text-xs font-mono uppercase tracking-widest text-accent mb-2">// instrutor</div>
-              <h2 className="text-3xl md:text-4xl font-bold">Lucas Marques</h2>
-              <p className="text-muted-foreground mt-1">Staff Engineer · 12 anos de mercado · Ex-iFood · Ex-Nubank</p>
-              <p className="mt-5 text-foreground/90 leading-relaxed">
-                12 anos construindo sistemas distribuídos em Go. Arquitetou pipelines de IA e dados que
-                processam dezenas de bilhões de eventos por dia. 15+ palestras em conferências,
-                contribuidor open-source e autor de "Data &amp; AI Engineering with Go".
-              </p>
+              <h2 className="text-3xl md:text-4xl font-bold">Aécio Junior</h2>
+              <p className="text-muted-foreground mt-1">Especialista em Gestão da Inovação Tecnológica · 25+ anos em TI · Pós em ML in Production (UFSCar)</p>
+              <div className="mt-5 space-y-4 text-foreground/90 leading-relaxed">
+                <p>
+                  Com mais de 25 anos de experiência em Tecnologia da Informação, atuando desde 1998 em projetos
+                  de Engenharia de Software, Banco de Dados, Dados e Inovação, Aécio Junior reúne sólida experiência
+                  prática de mercado e forte atuação na formação e desenvolvimento de profissionais de tecnologia.
+                </p>
+                <p>
+                  Graduado em Sistemas de Informação e pós-graduando em Machine Learning in Production pela
+                  Universidade Federal de São Carlos (UFSCar), possui ampla experiência no desenvolvimento de
+                  soluções escaláveis em Cloud, Engenharia de Dados, Analytics, Inteligência Artificial e
+                  Arquitetura de Sistemas.
+                </p>
+                <p>
+                  Atuou como Engenheiro de Software, Administrador de Banco de Dados, Engenheiro de Dados e líder
+                  técnico em organizações nacionais e multinacionais, no desenho e implementação de pipelines de
+                  dados, processos ETL/ELT, integrações, modelagem de dados, plataformas analíticas e soluções
+                  orientadas por inteligência artificial — sempre pautado por boas práticas de engenharia,
+                  governança, observabilidade e qualidade de dados.
+                </p>
+                <p>
+                  Também construiu uma sólida carreira como professor e mentor, traduzindo conceitos complexos em
+                  aplicações práticas, e participa ativamente de comunidades de tecnologia voltadas à disseminação
+                  do conhecimento e ao desenvolvimento do ecossistema tecnológico brasileiro.
+                </p>
+                <p>
+                  Neste curso, você aprende com um profissional que combina experiência prática de mercado, visão
+                  estratégica de negócios e sólida formação acadêmica — em Programação, Engenharia de Dados, Cloud
+                  Computing, Inteligência Artificial e desenvolvimento de soluções modernas.
+                </p>
+              </div>
               <div className="mt-5 flex gap-3">
                 <a href="#" aria-label="GitHub" className="w-9 h-9 rounded-lg bg-secondary border border-border flex items-center justify-center hover:bg-primary/20 transition"><Github className="w-4 h-4" /></a>
                 <a href="#" aria-label="LinkedIn" className="w-9 h-9 rounded-lg bg-secondary border border-border flex items-center justify-center hover:bg-primary/20 transition"><Linkedin className="w-4 h-4" /></a>
