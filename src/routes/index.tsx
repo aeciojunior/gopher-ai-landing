@@ -408,7 +408,6 @@ function FAQ() {
     { q: "As aulas são gravadas ou ao vivo?", a: "Conteúdo principal gravado em alta qualidade + encontros ao vivo semanais para tirar dúvidas. Tudo fica gravado e disponível." },
     { q: "Por quanto tempo tenho acesso?", a: "Plano Starter: 1 ano. Plano Pro: vitalício, incluindo todas as atualizações futuras." },
     { q: "O certificado é reconhecido?", a: "Sim. Certificado digital ao concluir 80% do curso, validável por link público e compatível com o LinkedIn." },
-    { q: "E se eu não gostar?", a: "Você tem 7 dias de garantia incondicional. Pedimos reembolso integral, sem perguntas." },
   ];
   return (
     <section id="faq" className="py-24">
