@@ -10,7 +10,7 @@ import gopherIcon from "@/assets/gopher-icon.png";
 import instructorPhoto from "@/assets/instructor.webp";
 
 const SYMPLA_URL =
-  "https://www.sympla.com.br/evento-online/ia-e-dados-com-go----ao-vivo---construa-ia-e-dados-de-verdade/3470670";
+  "https://www.sympla.com.br/evento-online/ia-e-dados-com-go-ao-vivo-construa-ia-e-dados-de-verdade/3470670";
 
 export const Route = createFileRoute("/")({
   head: () => ({
