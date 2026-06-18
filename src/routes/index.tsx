@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
 import {
   Brain, Rocket, Sparkles, Check, Star, Clock, Users, Trophy, Zap,
   GraduationCap, Github, Mail, ShieldCheck, CreditCard,
@@ -515,13 +514,8 @@ function FAQ() {
 }
 
 function Enroll() {
-  const [form, setForm] = useState({ name: "", email: "", phone: "", payment: "card" });
-  const [sent, setSent] = useState(false);
-
-  const submit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSent(true);
-  };
+  // TODO: trocar pelo link real do evento na Sympla quando publicado.
+  const symplaUrl = "https://www.sympla.com.br/evento/go-ai-developer-bootcamp-ao-vivo/0000000";
 
   return (
     <section id="inscricao" className="py-24 relative">
@@ -552,69 +546,35 @@ function Enroll() {
               </div>
             </div>
 
-            <div className="p-10 md:p-12">
-              {sent ? (
-                <div className="h-full flex flex-col items-center justify-center text-center">
-                  <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center mb-4 animate-pulse-glow">
-                    <Check className="w-8 h-8 text-primary" />
-                  </div>
-                  <h3 className="text-2xl font-bold">Inscrição recebida!</h3>
-                  <p className="mt-2 text-muted-foreground">Enviamos o link de pagamento para o seu e-mail.</p>
-                </div>
-              ) : (
-                <form onSubmit={submit} className="space-y-4">
-                  <style>{`.go-input{width:100%;background:var(--secondary);border:1px solid var(--border);border-radius:0.65rem;padding:0.7rem 0.9rem;color:var(--foreground);font-size:0.95rem;outline:none;transition:all .2s}.go-input:focus{border-color:var(--primary);box-shadow:0 0 0 3px oklch(0.78 0.16 210 / 25%)}`}</style>
-                  <Field label="Nome completo">
-                    <input required value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} className="go-input" placeholder="Seu nome" />
-                  </Field>
-                  <Field label="E-mail">
-                    <input required type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} className="go-input" placeholder="voce@email.com" />
-                  </Field>
-                  <Field label="WhatsApp">
-                    <input required value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} className="go-input" placeholder="(11) 99999-9999" />
-                  </Field>
-                  <Field label="Forma de pagamento">
-                    <div className="grid grid-cols-3 gap-2">
-                      {[
-                        { v: "card", l: "Cartão" },
-                        { v: "pix", l: "Pix" },
-                        { v: "boleto", l: "Boleto" },
-                      ].map((o) => (
-                        <button
-                          key={o.v}
-                          type="button"
-                          onClick={() => setForm({ ...form, payment: o.v })}
-                          className={`rounded-lg py-2.5 text-sm border transition ${
-                            form.payment === o.v ? "border-primary bg-primary/15 text-foreground" : "border-border text-muted-foreground hover:text-foreground"
-                          }`}
-                        >
-                          {o.l}
-                        </button>
-                      ))}
-                    </div>
-                  </Field>
-                  <button type="submit" className="w-full mt-2 rounded-full bg-primary text-primary-foreground py-3.5 font-semibold hover:opacity-90 transition glow-ring inline-flex items-center justify-center gap-2">
-                    <Rocket className="w-4 h-4" /> Finalizar inscrição
-                  </button>
-                  <p className="text-xs text-muted-foreground text-center">
-                    Ao se inscrever, você concorda com nossos Termos e Política de Privacidade.
-                  </p>
-                </form>
-              )}
+            <div className="p-10 md:p-12 flex flex-col justify-center">
+              <div className="text-xs font-mono uppercase tracking-widest text-accent mb-3">// inscrição</div>
+              <h3 className="text-2xl md:text-3xl font-bold leading-tight">
+                Inscrições pela <span className="text-gradient">Sympla</span>
+              </h3>
+              <p className="mt-4 text-muted-foreground">
+                A inscrição e o pagamento são feitos com segurança pela plataforma Sympla. Clique no botão
+                abaixo para garantir sua vaga — você será redirecionado para a página oficial do evento.
+              </p>
+              <a
+                href={symplaUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-primary text-primary-foreground py-4 px-8 font-semibold hover:opacity-90 transition glow-ring"
+              >
+                <Rocket className="w-5 h-5" /> Inscrever-se na Sympla
+              </a>
+              <div className="mt-6 space-y-2 text-xs text-muted-foreground">
+                <div className="flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-accent" /> Pagamento seguro processado pela Sympla</div>
+                <div className="flex items-center gap-2"><CreditCard className="w-4 h-4 text-accent" /> Cartão (12x sem juros), Pix e boleto</div>
+              </div>
+              <p className="mt-6 text-xs text-muted-foreground">
+                Ao se inscrever, você concorda com nossos Termos e Política de Privacidade.
+              </p>
             </div>
           </div>
         </div>
       </div>
     </section>
-  );
-}
-
-function Field({ label, children }: { label: string; children: React.ReactNode }) {
-  return (
-    <label className="block">
-      <span className="text-xs font-mono uppercase tracking-widest text-muted-foreground">{label}</span>
-      <div className="mt-1.5">{children}</div>
-    </label>
   );
 }
 
