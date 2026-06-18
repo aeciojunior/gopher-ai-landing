@@ -58,7 +58,7 @@ function Nav() {
           <a href="#modulos" className="hover:text-foreground transition">Módulos</a>
           <a href="#instrutor" className="hover:text-foreground transition">Instrutor</a>
           <a href="#bonus" className="hover:text-foreground transition">Bônus</a>
-          <a href="#precos" className="hover:text-foreground transition">Preços</a>
+          <a href="#precos" className="hover:text-foreground transition">Investimento</a>
           <a href="#faq" className="hover:text-foreground transition">FAQ</a>
         </nav>
         <a href="#inscricao" className="inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-5 py-2 text-sm font-semibold hover:opacity-90 transition glow-ring">
@@ -636,7 +636,7 @@ function Footer() {
           <div className="text-sm font-semibold mb-3">Curso</div>
           <ul className="space-y-2 text-sm text-muted-foreground">
             <li><a href="#modulos" className="hover:text-foreground">Módulos</a></li>
-            <li><a href="#precos" className="hover:text-foreground">Preços</a></li>
+            <li><a href="#precos" className="hover:text-foreground">Investimento</a></li>
             <li><a href="#faq" className="hover:text-foreground">FAQ</a></li>
           </ul>
         </div>
