@@ -5,7 +5,7 @@ import {
   ChevronRight, Terminal, Bot, Database, Cpu, Server, Network, Workflow,
   Boxes, Layers, Activity, Gift, BookOpen, Globe,
 } from "lucide-react";
-import heroImage from "@/assets/hero-gopher.jpg";
+import heroImage from "@/assets/hero-gopher.webp";
 import gopherIcon from "@/assets/gopher-icon.png";
 import instructorPhoto from "@/assets/instructor.webp";
 
@@ -116,9 +116,9 @@ function Hero() {
           <div className="absolute -inset-8 rounded-3xl bg-primary/20 blur-3xl" />
           <img
             src={heroImage}
-            alt="Gopher mascote do Go com cérebro de IA"
-            width={1536}
-            height={1280}
+            alt="Go AI Developer — gopher construindo IA e pipelines de dados"
+            width={1600}
+            height={873}
             className="relative rounded-3xl border border-border shadow-[var(--shadow-elegant)]"
           />
           <div className="absolute -bottom-6 -left-6 glass rounded-2xl p-4 flex items-center gap-3 shadow-[var(--shadow-card)]">
