@@ -274,10 +274,10 @@ function Modules() {
 function Features() {
   const feats = [
     { icon: Zap, title: "Aulas práticas", desc: "Cada conceito é codificado ao vivo." },
-    { icon: Users, title: "Mentoria", desc: "Encontros semanais em grupo." },
+    { icon: Users, title: "Encontros ao vivo", desc: "8 sábados de imersão, das 14h às 17h." },
     { icon: ShieldCheck, title: "Garantia 7 dias", desc: "Reembolso integral sem perguntas." },
     { icon: GraduationCap, title: "Certificado", desc: "Conclusão validada e compartilhável." },
-    { icon: Clock, title: "Acesso vitalício", desc: "Conteúdo seu para sempre." },
+    { icon: Clock, title: "Gravações disponíveis", desc: "Reveja todos os encontros quando quiser." },
     { icon: Sparkles, title: "Atualizações", desc: "Novos módulos a cada trimestre." },
   ];
   return (
