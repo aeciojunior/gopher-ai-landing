@@ -278,7 +278,7 @@ function Features() {
     { icon: ShieldCheck, title: "Garantia 7 dias", desc: "Reembolso integral sem perguntas." },
     { icon: GraduationCap, title: "Certificado", desc: "Conclusão validada e compartilhável." },
     { icon: Clock, title: "Gravações disponíveis", desc: "Reveja todos os encontros quando quiser." },
-    { icon: Sparkles, title: "Atualizações", desc: "Novos módulos a cada trimestre." },
+    { icon: Sparkles, title: "Material de apoio", desc: "Exercícios e códigos de cada aula." },
   ];
   return (
     <section className="py-20 border-y border-border">
