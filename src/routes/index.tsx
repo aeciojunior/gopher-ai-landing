@@ -4,7 +4,7 @@ import {
   Brain, Rocket, Sparkles, Check, Star, Clock, Users, Trophy, Zap,
   GraduationCap, Github, Mail, ShieldCheck, CreditCard,
   ChevronRight, Terminal, Bot, Database, Cpu, Server, Network, Workflow,
-  Boxes, Layers, Activity,
+  Boxes, Layers, Activity, Gift, BookOpen, Globe,
 } from "lucide-react";
 import heroImage from "@/assets/hero-gopher.jpg";
 import gopherIcon from "@/assets/gopher-icon.png";
@@ -36,6 +36,7 @@ function Landing() {
       <Features />
       <Instructor />
       <Testimonials />
+      <Bonus />
       <Pricing />
       <FAQ />
       <Enroll />
@@ -56,6 +57,7 @@ function Nav() {
           <a href="#sobre" className="hover:text-foreground transition">Sobre</a>
           <a href="#modulos" className="hover:text-foreground transition">Módulos</a>
           <a href="#instrutor" className="hover:text-foreground transition">Instrutor</a>
+          <a href="#bonus" className="hover:text-foreground transition">Bônus</a>
           <a href="#precos" className="hover:text-foreground transition">Preços</a>
           <a href="#faq" className="hover:text-foreground transition">FAQ</a>
         </nav>
@@ -385,6 +387,58 @@ function Testimonials() {
               </div>
             </div>
           ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Bonus() {
+  const bonuses = [
+    { icon: GraduationCap, title: "Mentoria individual de carreira técnica", desc: "Sessão 1:1 para revisar seu momento, traçar um plano de evolução e acelerar sua carreira em tech." },
+    { icon: BookOpen, title: "2 e-books de Golang", desc: "Materiais autorais para dominar a linguagem — da base aos padrões avançados de produção." },
+    { icon: Bot, title: "Mini curso de Claude Code", desc: "Programe com IA na prática usando o Claude Code e multiplique sua produtividade no dia a dia." },
+    { icon: Globe, title: "Skills de busca de vagas internacionais", desc: "Estratégias e ferramentas para conquistar vagas remotas em empresas do exterior (USD/EUR)." },
+  ];
+  return (
+    <section id="bonus" className="py-24 relative">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="relative rounded-3xl border border-primary glow-ring overflow-hidden p-8 md:p-14" style={{ background: "var(--gradient-card)" }}>
+          <div className="absolute -right-24 -top-24 w-80 h-80 rounded-full bg-primary/20 blur-3xl pointer-events-none" />
+          <div className="absolute -left-24 -bottom-24 w-80 h-80 rounded-full bg-accent/10 blur-3xl pointer-events-none" />
+
+          <div className="relative text-center max-w-2xl mx-auto mb-12">
+            <div className="inline-flex items-center gap-2 rounded-full bg-primary/15 border border-primary/40 px-4 py-1.5 text-xs font-mono uppercase tracking-widest text-foreground mb-5">
+              <Gift className="w-4 h-4 text-accent" /> Bônus exclusivos
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+              Inscreva-se hoje e leve <span className="text-gradient">tudo isso de bônus</span>
+            </h2>
+            <p className="mt-4 text-muted-foreground">Incluídos gratuitamente na sua inscrição — sem nenhum custo adicional.</p>
+          </div>
+
+          <div className="relative grid md:grid-cols-2 gap-5">
+            {bonuses.map((b) => (
+              <div key={b.title} className="flex items-start gap-4 rounded-2xl border border-border bg-background/40 p-6 hover:border-primary/50 transition">
+                <div className="w-12 h-12 rounded-xl bg-primary/15 flex items-center justify-center shrink-0">
+                  <b.icon className="w-6 h-6 text-primary" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-start justify-between gap-3">
+                    <h3 className="font-display font-semibold text-lg leading-snug">{b.title}</h3>
+                    <span className="shrink-0 text-[10px] font-bold tracking-wide rounded-full bg-accent/20 text-accent px-2 py-1">GRÁTIS</span>
+                  </div>
+                  <p className="text-sm text-muted-foreground mt-1.5 leading-relaxed">{b.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="relative text-center mt-10">
+            <a href="#inscricao" className="inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-8 py-3.5 font-semibold hover:opacity-90 transition glow-ring">
+              <Rocket className="w-4 h-4" /> Quero minha vaga + bônus
+            </a>
+          </div>
         </div>
       </div>
     </section>
