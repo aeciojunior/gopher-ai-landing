@@ -330,10 +330,9 @@ function Instructor() {
                   prática de mercado e forte atuação na formação e desenvolvimento de profissionais de tecnologia.
                 </p>
                 <p>
-                  Graduado em Sistemas de Informação e pós-graduado em Machine Learning in Production pela
-                  Universidade Federal de São Carlos (UFSCar), possui ampla experiência no desenvolvimento de
-                  soluções escaláveis em Cloud, Engenharia de Dados, Analytics, Inteligência Artificial e
-                  Arquitetura de Sistemas.
+                  Pós-graduado em Machine Learning in Production pela Universidade Federal de São Carlos
+                  (UFSCar), possui ampla experiência no desenvolvimento de soluções escaláveis em Cloud,
+                  Engenharia de Dados, Analytics, Inteligência Artificial e Arquitetura de Sistemas.
                 </p>
                 <p>
                   Atuou como Engenheiro de Software, Administrador de Banco de Dados, Engenheiro de Dados e líder
