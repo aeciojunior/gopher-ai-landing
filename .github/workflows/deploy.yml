@@ -1,0 +1,37 @@
+name: Deploy to Render
+
+# Triggers a Render deploy on every push to main (and allows manual runs).
+# Render's native GitHub webhook isn't wired for this API-created service, so
+# we trigger the deploy ourselves via a Render Deploy Hook.
+#
+# Setup (one-time):
+#   1. Render dashboard -> service "gopher-ai-landing" -> Settings -> Deploy Hook -> copy the URL.
+#   2. GitHub repo -> Settings -> Secrets and variables -> Actions -> New repository secret:
+#        Name:  RENDER_DEPLOY_HOOK
+#        Value: <the deploy hook URL>
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Render deploy
+        env:
+          HOOK: ${{ secrets.RENDER_DEPLOY_HOOK }}
+        run: |
+          if [ -z "$HOOK" ]; then
+            echo "::warning::RENDER_DEPLOY_HOOK secret is not set yet — skipping. Add it in repo Settings -> Secrets -> Actions."
+            exit 0
+          fi
+          echo "Triggering Render deploy..."
+          code=$(curl -s -o /dev/null -w "%{http_code}" -X POST "$HOOK")
+          echo "Render responded with HTTP $code"
+          if [ "$code" -lt 200 ] || [ "$code" -ge 300 ]; then
+            echo "::error::Deploy hook call failed (HTTP $code)"
+            exit 1
+          fi
+          echo "Deploy triggered successfully."
