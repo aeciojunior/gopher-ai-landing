@@ -317,7 +317,7 @@ function Instructor() {
               <p className="text-muted-foreground mt-1">25+ anos em Tecnologia da Informação · desde 1998</p>
               <div className="mt-3 flex flex-wrap gap-2">
                 <span className="inline-flex items-center gap-1.5 rounded-full border border-primary/40 bg-primary/10 px-3 py-1.5 text-xs font-medium text-foreground">
-                  <GraduationCap className="w-3.5 h-3.5 text-accent" /> Pós-graduado em Gestão da Inovação Tecnológica
+                  <GraduationCap className="w-3.5 h-3.5 text-accent" /> Pós-graduado em Gestão da Inovação Tecnológica · UEFS
                 </span>
                 <span className="inline-flex items-center gap-1.5 rounded-full border border-primary/40 bg-primary/10 px-3 py-1.5 text-xs font-medium text-foreground">
                   <GraduationCap className="w-3.5 h-3.5 text-accent" /> Pós-graduado em Machine Learning in Production · UFSCar
