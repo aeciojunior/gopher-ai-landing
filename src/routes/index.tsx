@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import {
-  Brain, Rocket, Sparkles, Check, Star, Clock, Users, Trophy, Zap,
+  Brain, Rocket, Sparkles, Check, Clock, Users, Trophy, Zap,
   GraduationCap, Github, Mail, ShieldCheck, CreditCard,
   ChevronRight, Terminal, Bot, Database, Cpu, Server, Network, Workflow,
   Boxes, Layers, Activity, Gift, BookOpen, Globe,
@@ -37,7 +37,6 @@ function Landing() {
       <Modules />
       <Features />
       <Instructor />
-      <Testimonials />
       <Bonus />
       <Pricing />
       <FAQ />
@@ -356,38 +355,6 @@ function Instructor() {
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function Testimonials() {
-  const t = [
-    { name: "Mariana S.", role: "Backend @ Nubank", text: "Em 3 meses migrei do Python pro Go e já entreguei um agente de IA em produção. Curso transformador." },
-    { name: "Ricardo P.", role: "Data Engineer @ iFood", text: "A trilha de Kafka e ClickHouse é absurda. Reescrevi um pipeline em Go e cortei a latência pela metade." },
-    { name: "Bruno A.", role: "Founder @ Startup IA", text: "Construí meu MVP inteiro — RAG na frente e pipeline de dados atrás. Performance e custo de inferência caíram pela metade." },
-  ];
-  return (
-    <section className="py-24">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-14">
-          <div className="text-xs font-mono uppercase tracking-widest text-accent mb-4">// depoimentos</div>
-          <h2 className="text-4xl md:text-5xl font-bold">Quem fez, <span className="text-gradient">recomenda.</span></h2>
-        </div>
-        <div className="grid md:grid-cols-3 gap-6">
-          {t.map((x) => (
-            <div key={x.name} className="rounded-2xl p-7 border border-border" style={{ background: "var(--gradient-card)" }}>
-              <div className="flex gap-1 mb-4">
-                {Array.from({ length: 5 }).map((_, i) => <Star key={i} className="w-4 h-4 fill-accent text-accent" />)}
-              </div>
-              <p className="text-foreground/90 leading-relaxed">"{x.text}"</p>
-              <div className="mt-6 pt-5 border-t border-border">
-                <div className="font-semibold">{x.name}</div>
-                <div className="text-sm text-muted-foreground">{x.role}</div>
-              </div>
-            </div>
-          ))}
         </div>
       </div>
     </section>
