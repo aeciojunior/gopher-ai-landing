@@ -9,6 +9,9 @@ import heroImage from "@/assets/hero-gopher.webp";
 import gopherIcon from "@/assets/gopher-icon.png";
 import instructorPhoto from "@/assets/instructor.webp";
 
+const SYMPLA_URL =
+  "https://www.sympla.com.br/evento-online/ia-e-dados-com-go----ao-vivo---construa-ia-e-dados-de-verdade/3470670";
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -92,7 +95,7 @@ function Hero() {
             alta performance prontas para produção.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <a href="#inscricao" className="inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-7 py-3.5 font-semibold hover:opacity-90 transition glow-ring">
+            <a href={SYMPLA_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-7 py-3.5 font-semibold hover:opacity-90 transition glow-ring">
               <Rocket className="w-4 h-4" /> Garantir minha vaga
             </a>
             <a href="#modulos" className="inline-flex items-center gap-2 rounded-full border border-border px-7 py-3.5 font-semibold hover:bg-secondary transition">
@@ -433,7 +436,7 @@ function Bonus() {
           </div>
 
           <div className="relative text-center mt-10">
-            <a href="#inscricao" className="inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-8 py-3.5 font-semibold hover:opacity-90 transition glow-ring">
+            <a href={SYMPLA_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-8 py-3.5 font-semibold hover:opacity-90 transition glow-ring">
               <Rocket className="w-4 h-4" /> Quero minha vaga + bônus
             </a>
           </div>
@@ -468,7 +471,7 @@ function Pricing() {
             ))}
           </div>
 
-          <a href="#inscricao" className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-8 py-3.5 font-semibold hover:opacity-90 transition glow-ring">
+          <a href={SYMPLA_URL} target="_blank" rel="noopener noreferrer" className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-8 py-3.5 font-semibold hover:opacity-90 transition glow-ring">
             <Rocket className="w-4 h-4" /> Garantir minha vaga
           </a>
 
@@ -514,8 +517,6 @@ function FAQ() {
 }
 
 function Enroll() {
-  const symplaUrl = "https://www.sympla.com.br/evento-online/ia-e-dados-com-go----ao-vivo---construa-ia-e-dados-de-verdade/3470670";
-
   return (
     <section id="inscricao" className="py-24 relative">
       <div className="max-w-5xl mx-auto px-6">
@@ -556,7 +557,7 @@ function Enroll() {
                 abaixo para garantir sua vaga — você será redirecionado para a página oficial do evento.
               </p>
               <a
-                href={symplaUrl}
+                href={SYMPLA_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-primary text-primary-foreground py-4 px-8 font-semibold hover:opacity-90 transition glow-ring"
