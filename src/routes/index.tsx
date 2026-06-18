@@ -451,8 +451,8 @@ function Pricing() {
       <div className="max-w-2xl mx-auto px-6">
         <div className="text-center mb-12">
           <div className="text-xs font-mono uppercase tracking-widest text-accent mb-4">// investimento</div>
-          <h2 className="text-4xl md:text-5xl font-bold">Um <span className="text-gradient">preço</span>. Curso completo.</h2>
-          <p className="mt-4 text-muted-foreground">Pagamento único com acesso a todo o conteúdo.</p>
+          <h2 className="text-4xl md:text-5xl font-bold">Invista uma vez, <span className="text-gradient">colha a carreira inteira</span>.</h2>
+          <p className="mt-4 text-muted-foreground">Domine as habilidades de IA e Engenharia de Dados mais valorizadas do mercado — e veja o curso se pagar logo na primeira oportunidade.</p>
         </div>
         <div className="relative rounded-3xl border border-primary glow-ring p-10 md:p-12 text-center" style={{ background: "var(--gradient-card)" }}>
           <div className="text-sm text-muted-foreground">Curso completo · Go AI Developer</div>
