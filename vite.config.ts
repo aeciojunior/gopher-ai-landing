@@ -12,4 +12,7 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  // Default Lovable preset targets Cloudflare Workers. We deploy to Render (Node),
+  // so build a standalone Node server (.output/server/index.mjs) that listens on PORT.
+  nitro: { preset: "node-server" },
 });
