@@ -1,9 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import {
-  Brain, Code2, Rocket, Sparkles, Check, Star, Clock, Users, Trophy, Zap,
+  Brain, Rocket, Sparkles, Check, Star, Clock, Users, Trophy, Zap,
   GraduationCap, Github, Linkedin, Twitter, Mail, ShieldCheck, CreditCard,
-  ChevronRight, Terminal, Bot, Database, Cpu, MessageSquare,
+  ChevronRight, Terminal, Bot, Database, Cpu, Server, Network, Workflow,
+  Boxes, Layers, Activity,
 } from "lucide-react";
 import heroImage from "@/assets/hero-gopher.jpg";
 import gopherIcon from "@/assets/gopher-icon.png";
@@ -11,10 +12,10 @@ import gopherIcon from "@/assets/gopher-icon.png";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Go AI Developer — Construa aplicações reais com Inteligência Artificial" },
-      { name: "description", content: "Curso definitivo para dominar Go + IA. Construa agentes, RAG, APIs e microserviços de IA em produção. Inscrições abertas." },
-      { property: "og:title", content: "Go AI Developer — Aplicações reais com IA" },
-      { property: "og:description", content: "Domine Go e Inteligência Artificial. Construa LLMs, agentes, RAG e APIs prontas para produção." },
+      { title: "Go AI Developer — IA e Engenharia de Dados de alta performance com Go" },
+      { name: "description", content: "Curso definitivo de Go para IA e Dados. Construa agentes, RAG e LLMs ao lado de pipelines de Kafka, ClickHouse e Iceberg — APIs prontas para produção. Inscrições abertas." },
+      { property: "og:title", content: "Go AI Developer — IA e Engenharia de Dados com Go" },
+      { property: "og:description", content: "Domine Go aplicado a IA e Engenharia de Dados: agentes, RAG, LLMs, Kafka, ClickHouse, Iceberg e APIs de alta performance em produção." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
     ],
@@ -78,26 +79,28 @@ function Hero() {
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05]">
             <span className="text-gradient">Go AI Developer</span>
             <br />
-            <span className="text-foreground/90">construa IA</span>
+            <span className="text-foreground/90">construa IA e dados</span>
             <br />
             <span className="text-foreground/70">de verdade.</span>
           </h1>
           <p className="mt-6 text-lg text-muted-foreground max-w-xl leading-relaxed">
-            Domine <span className="text-foreground font-semibold">Go</span> aplicado a Inteligência Artificial:
-            agentes autônomos, RAG, LLMs, embeddings, vetores e APIs de alta performance prontas para produção.
+            Domine <span className="text-foreground font-semibold">Go</span> aplicado a Inteligência Artificial e
+            Engenharia de Dados: agentes, RAG e LLMs ao lado de pipelines de{" "}
+            <span className="text-foreground font-semibold">Kafka, ClickHouse e Iceberg</span> — APIs de
+            alta performance prontas para produção.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a href="#inscricao" className="inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-7 py-3.5 font-semibold hover:opacity-90 transition glow-ring">
               <Rocket className="w-4 h-4" /> Garantir minha vaga
             </a>
             <a href="#modulos" className="inline-flex items-center gap-2 rounded-full border border-border px-7 py-3.5 font-semibold hover:bg-secondary transition">
-              Ver currículo <ChevronRight className="w-4 h-4" />
+              Ver ementa completa <ChevronRight className="w-4 h-4" />
             </a>
           </div>
           <div className="mt-10 grid grid-cols-3 gap-6 max-w-md">
             {[
-              { v: "12+", l: "Semanas" },
-              { v: "60h", l: "Conteúdo" },
+              { v: "12", l: "Módulos" },
+              { v: "130h+", l: "Conteúdo" },
               { v: "8", l: "Projetos" },
             ].map((s) => (
               <div key={s.l}>
@@ -132,7 +135,11 @@ function Hero() {
 }
 
 function Marquee() {
-  const items = ["OpenAI", "Anthropic", "Ollama", "LangChain", "Pinecone", "Qdrant", "PostgreSQL", "Redis", "gRPC", "Docker", "Kubernetes"];
+  const items = [
+    "OpenAI", "Anthropic", "Ollama", "LangChain", "Qdrant", "pgvector",
+    "Kafka", "ClickHouse", "Apache Iceberg", "Airflow", "dbt",
+    "PostgreSQL", "Redis", "gRPC", "Prometheus", "Grafana", "Docker", "Kubernetes",
+  ];
   return (
     <section className="border-y border-border py-8 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
@@ -156,20 +163,21 @@ function About() {
         <div>
           <div className="text-xs font-mono uppercase tracking-widest text-accent mb-4">// sobre o curso</div>
           <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-            O ecossistema de IA é <span className="text-gradient">Python</span>.
+            O ecossistema de IA e dados é <span className="text-gradient">Python</span>.
             <br />A produção em escala é <span className="text-gradient">Go</span>.
           </h2>
           <p className="mt-6 text-muted-foreground leading-relaxed">
-            Empresas como Uber, Cloudflare e OpenAI usam Go para servir IA em produção: baixa latência,
-            concorrência nativa e binários únicos. Neste curso você aprende a unir o melhor dos dois mundos —
-            consumindo modelos, orquestrando agentes e construindo APIs robustas.
+            Empresas como Uber, Cloudflare, iFood e Nubank usam Go para servir IA e processar bilhões
+            de eventos por dia: baixa latência, concorrência nativa e binários únicos. Neste curso você
+            une os dois mundos — consumindo modelos e orquestrando agentes, e ao mesmo tempo construindo
+            pipelines de dados e APIs robustas de ponta a ponta.
           </p>
           <ul className="mt-8 space-y-3">
             {[
+              "Pipeline real event-driven: Kafka → ClickHouse + dashboard",
               "Projetos reais publicados no seu GitHub",
               "Mentorias semanais ao vivo com o instrutor",
-              "Comunidade privada no Discord",
-              "Certificado reconhecido pelo mercado",
+              "Comunidade privada no Discord e certificado reconhecido",
             ].map((t) => (
               <li key={t} className="flex items-center gap-3">
                 <span className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
@@ -216,22 +224,26 @@ func main() {
 
 function Modules() {
   const modules = [
-    { icon: Terminal, title: "Fundamentos de Go", desc: "Sintaxe, goroutines, channels e padrões idiomáticos para IA." },
-    { icon: Brain, title: "LLMs na prática", desc: "OpenAI, Anthropic, Gemini e modelos open-source com Ollama." },
-    { icon: Bot, title: "Agentes Autônomos", desc: "Function calling, tools, ReAct e arquiteturas multi-agente." },
-    { icon: Database, title: "RAG & Vector DBs", desc: "Embeddings, Qdrant, pgvector e busca semântica em escala." },
-    { icon: MessageSquare, title: "Chat & Streaming", desc: "SSE, WebSockets e respostas em streaming de alta performance." },
-    { icon: Cpu, title: "MLOps com Go", desc: "Observabilidade, rate-limit, cache de prompts e otimização de custo." },
-    { icon: Code2, title: "APIs Production-Ready", desc: "gRPC, REST, autenticação JWT e arquitetura hexagonal." },
-    { icon: Rocket, title: "Deploy & Escala", desc: "Docker, Kubernetes, Cloud Run e CI/CD para IA." },
+    { icon: Terminal, hours: "8h", title: "Fundamentos de Go", desc: "Sintaxe, tipos, structs, goroutines, channels, context, erros e testes idiomáticos." },
+    { icon: Cpu, hours: "10h", title: "Concorrência Avançada", desc: "Worker pools, fan-in/fan-out, sync/atomic, profiling com pprof e benchmarks." },
+    { icon: Database, hours: "12h", title: "Ingestão de Dados", desc: "REST/GraphQL, web scraping, CDC com Debezium e batch vs streaming." },
+    { icon: Server, hours: "12h", title: "Bancos & Stores", desc: "PostgreSQL, MongoDB, Redis, ClickHouse e estratégias de migração." },
+    { icon: Brain, hours: "10h", title: "LLMs na prática", desc: "OpenAI, Anthropic, Gemini e modelos open-source com Ollama." },
+    { icon: Bot, hours: "10h", title: "Agentes Autônomos", desc: "Function calling, tools, ReAct e arquiteturas multi-agente." },
+    { icon: Network, hours: "10h", title: "RAG & Vector DBs", desc: "Embeddings, Qdrant, pgvector e busca semântica em escala." },
+    { icon: Workflow, hours: "14h", title: "Kafka & Streaming", desc: "Producers/consumers, Schema Registry e entrega exactly-once." },
+    { icon: Boxes, hours: "10h", title: "ETL/ELT em Produção", desc: "Orquestração com Airflow, dbt e frameworks de data quality." },
+    { icon: Layers, hours: "10h", title: "Data Lakes & Lakehouse", desc: "Parquet/Avro/ORC, Apache Iceberg, S3 e query engines." },
+    { icon: Activity, hours: "10h", title: "APIs, gRPC & Observabilidade", desc: "Protobuf, JWT/OAuth, rate-limit, Prometheus, OpenTelemetry e Grafana." },
+    { icon: Rocket, hours: "16h", title: "Deploy & Projeto Final", desc: "Docker, Kubernetes, Helm, CI/CD, Terraform e pipeline event-driven Kafka→ClickHouse." },
   ];
   return (
     <section id="modulos" className="py-24 relative">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <div className="text-xs font-mono uppercase tracking-widest text-accent mb-4">// currículo</div>
-          <h2 className="text-4xl md:text-5xl font-bold">8 módulos. <span className="text-gradient">1 carreira.</span></h2>
-          <p className="mt-4 text-muted-foreground">Do zero ao deploy de produtos de IA em produção com Go.</p>
+          <div className="text-xs font-mono uppercase tracking-widest text-accent mb-4">// ementa completa</div>
+          <h2 className="text-4xl md:text-5xl font-bold">12 módulos. <span className="text-gradient">1 carreira.</span></h2>
+          <p className="mt-4 text-muted-foreground">130h+ de conteúdo prático — de Go puro ao deploy de IA e pipelines de dados em produção.</p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
           {modules.map((m, i) => (
@@ -240,7 +252,10 @@ function Modules() {
               className="group relative rounded-2xl p-6 border border-border hover:border-primary/50 transition"
               style={{ background: "var(--gradient-card)" }}
             >
-              <div className="text-xs font-mono text-muted-foreground mb-3">0{i + 1}</div>
+              <div className="flex items-center justify-between mb-3">
+                <span className="text-xs font-mono text-muted-foreground">{String(i + 1).padStart(2, "0")}</span>
+                <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-secondary border border-border text-muted-foreground">{m.hours}</span>
+              </div>
               <div className="w-11 h-11 rounded-xl bg-primary/15 flex items-center justify-center mb-4 group-hover:bg-primary/25 transition">
                 <m.icon className="w-5 h-5 text-primary" />
               </div>
@@ -296,10 +311,11 @@ function Instructor() {
             <div>
               <div className="text-xs font-mono uppercase tracking-widest text-accent mb-2">// instrutor</div>
               <h2 className="text-3xl md:text-4xl font-bold">Lucas Marques</h2>
-              <p className="text-muted-foreground mt-1">Senior Go Engineer · Ex-Uber · Google Developer Expert</p>
+              <p className="text-muted-foreground mt-1">Staff Engineer · 12 anos de mercado · Ex-iFood · Ex-Nubank</p>
               <p className="mt-5 text-foreground/90 leading-relaxed">
-                10+ anos construindo sistemas distribuídos em Go. Já colocou em produção pipelines de IA
-                que servem milhões de requisições por dia. Autor open-source e palestrante internacional.
+                12 anos construindo sistemas distribuídos em Go. Arquitetou pipelines de IA e dados que
+                processam dezenas de bilhões de eventos por dia. 15+ palestras em conferências,
+                contribuidor open-source e autor de "Data &amp; AI Engineering with Go".
               </p>
               <div className="mt-5 flex gap-3">
                 <a href="#" aria-label="GitHub" className="w-9 h-9 rounded-lg bg-secondary border border-border flex items-center justify-center hover:bg-primary/20 transition"><Github className="w-4 h-4" /></a>
@@ -317,8 +333,8 @@ function Instructor() {
 function Testimonials() {
   const t = [
     { name: "Mariana S.", role: "Backend @ Nubank", text: "Em 3 meses migrei do Python pro Go e já entreguei um agente de IA em produção. Curso transformador." },
-    { name: "Ricardo P.", role: "Tech Lead @ iFood", text: "A profundidade técnica é absurda. Não é mais um curso de hello world com OpenAI — é engenharia de verdade." },
-    { name: "Bruno A.", role: "Founder @ Startup IA", text: "Construí meu MVP inteiro com o que aprendi. Performance e custo de inferência caíram pela metade." },
+    { name: "Ricardo P.", role: "Data Engineer @ iFood", text: "A trilha de Kafka e ClickHouse é absurda. Reescrevi um pipeline em Go e cortei a latência pela metade." },
+    { name: "Bruno A.", role: "Founder @ Startup IA", text: "Construí meu MVP inteiro — RAG na frente e pipeline de dados atrás. Performance e custo de inferência caíram pela metade." },
   ];
   return (
     <section className="py-24">
@@ -350,15 +366,15 @@ function Pricing() {
   const plans = [
     {
       name: "Starter", price: "R$ 997", sub: "ou 12x R$ 83", popular: false,
-      features: ["Acesso a todos os módulos", "Certificado de conclusão", "Comunidade Discord", "Acesso por 1 ano"],
+      features: ["Acesso aos 12 módulos (130h+)", "Materiais e código-fonte", "Certificado de conclusão", "Comunidade no Discord", "Acesso por 1 ano"],
     },
     {
       name: "Pro", price: "R$ 1.497", sub: "ou 12x R$ 125", popular: true,
-      features: ["Tudo do Starter", "Mentorias ao vivo semanais", "Acesso vitalício", "Revisão de código 1:1", "Projetos extras de portfólio", "Sala VIP no Discord"],
+      features: ["Tudo do Starter", "Mentorias ao vivo semanais", "Acesso vitalício + atualizações", "Revisão de código 1:1", "Projeto final guiado (Kafka→ClickHouse)", "Sala VIP e suporte de carreira"],
     },
     {
       name: "Empresa", price: "Sob consulta", sub: "para times 5+", popular: false,
-      features: ["Tudo do Pro", "Trilha personalizada", "Workshops in-company", "Suporte dedicado", "Notas fiscais"],
+      features: ["Tudo do Pro", "Trilha personalizada", "Workshops in-company", "Relatórios de progresso", "Suporte dedicado e SLA", "Notas fiscais"],
     },
   ];
   return (
@@ -367,7 +383,7 @@ function Pricing() {
         <div className="text-center mb-14">
           <div className="text-xs font-mono uppercase tracking-widest text-accent mb-4">// investimento</div>
           <h2 className="text-4xl md:text-5xl font-bold">Escolha seu <span className="text-gradient">plano</span></h2>
-          <p className="mt-4 text-muted-foreground">Acesso imediato após a confirmação do pagamento.</p>
+          <p className="mt-4 text-muted-foreground">Acesso imediato após a confirmação do pagamento. Pix com 10% de desconto.</p>
         </div>
         <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {plans.map((p) => (
@@ -411,11 +427,12 @@ function Pricing() {
 
 function FAQ() {
   const faqs = [
-    { q: "Preciso saber Go antes?", a: "Não. O módulo 01 cobre fundamentos do zero, desde sintaxe até concorrência idiomática." },
-    { q: "Preciso saber Inteligência Artificial?", a: "Também não. Você aprende os conceitos essenciais (LLMs, embeddings, RAG, agentes) de forma prática." },
-    { q: "As aulas são gravadas ou ao vivo?", a: "Conteúdo principal gravado em alta qualidade + encontros ao vivo semanais para tirar dúvidas." },
+    { q: "Preciso saber Go antes?", a: "Não. O módulo 01 cobre fundamentos do zero, desde sintaxe até concorrência idiomática. Recomendamos apenas lógica de programação e SQL básico." },
+    { q: "Preciso saber IA ou Engenharia de Dados?", a: "Também não. Você aprende na prática tanto LLMs, embeddings, RAG e agentes quanto Kafka, ClickHouse, Iceberg e Airflow — do essencial ao avançado." },
+    { q: "Qual a carga horária e a duração?", a: "São 130h+ distribuídas em 12 módulos. Cerca de 12 semanas no ritmo guiado (plano Pro) ou no seu próprio ritmo (plano Starter)." },
+    { q: "As aulas são gravadas ou ao vivo?", a: "Conteúdo principal gravado em alta qualidade + encontros ao vivo semanais para tirar dúvidas. Tudo fica gravado e disponível." },
     { q: "Por quanto tempo tenho acesso?", a: "Plano Starter: 1 ano. Plano Pro: vitalício, incluindo todas as atualizações futuras." },
-    { q: "Tem certificado?", a: "Sim, certificado digital ao concluir 80% do curso, validável por link público." },
+    { q: "O certificado é reconhecido?", a: "Sim. Certificado digital ao concluir 80% do curso, validável por link público e compatível com o LinkedIn." },
     { q: "E se eu não gostar?", a: "Você tem 7 dias de garantia incondicional. Pedimos reembolso integral, sem perguntas." },
   ];
   return (
@@ -461,16 +478,17 @@ function Enroll() {
                 Garanta sua vaga <br /><span className="text-gradient">agora.</span>
               </h2>
               <p className="mt-4 text-muted-foreground">
-                Vagas limitadas para garantir a qualidade da mentoria. Início em <strong className="text-foreground">15 de julho</strong>.
+                Vagas limitadas a <strong className="text-foreground">80 alunos</strong> para garantir a qualidade
+                da mentoria. Início em <strong className="text-foreground">15 de julho</strong>.
               </p>
               <ul className="mt-8 space-y-3 text-sm">
-                {["7 dias de garantia incondicional", "Pagamento seguro via Stripe / Pix", "Acesso liberado em até 5 min", "Suporte humano via WhatsApp"].map((b) => (
+                {["7 dias de garantia incondicional", "Pix com 10% de desconto", "Acesso liberado em até 5 min", "Suporte humano via WhatsApp"].map((b) => (
                   <li key={b} className="flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-accent" />{b}</li>
                 ))}
               </ul>
               <div className="mt-8 flex items-center gap-4 text-xs text-muted-foreground">
                 <CreditCard className="w-4 h-4" />
-                <span>Visa · Mastercard · Amex · Pix · Boleto</span>
+                <span>Visa · Mastercard · Amex · Pix · Boleto · PayPal</span>
               </div>
             </div>
 
@@ -497,8 +515,8 @@ function Enroll() {
                   </Field>
                   <Field label="Plano">
                     <select value={form.plan} onChange={(e) => setForm({ ...form, plan: e.target.value })} className="go-input">
-                      <option value="starter">Starter — R$ 497</option>
-                      <option value="pro">Pro — R$ 997 (recomendado)</option>
+                      <option value="starter">Starter — R$ 997</option>
+                      <option value="pro">Pro — R$ 1.497 (recomendado)</option>
                       <option value="empresa">Empresa — sob consulta</option>
                     </select>
                   </Field>
@@ -557,7 +575,8 @@ function Footer() {
             <span>Go<span className="text-gradient">AI</span> Developer</span>
           </div>
           <p className="mt-3 text-sm text-muted-foreground max-w-sm">
-            Formação completa em desenvolvimento de aplicações de Inteligência Artificial com Go.
+            Formação completa em Go para Inteligência Artificial e Engenharia de Dados — de agentes e RAG
+            a pipelines de Kafka, ClickHouse e Iceberg em produção.
           </p>
         </div>
         <div>
@@ -578,7 +597,7 @@ function Footer() {
       </div>
       <div className="max-w-7xl mx-auto px-6 mt-10 pt-6 border-t border-border text-xs text-muted-foreground flex flex-wrap justify-between gap-4">
         <span>© {new Date().getFullYear()} Go AI Developer. Todos os direitos reservados.</span>
-        <span className="font-mono">Made with Go 🐹 + AI</span>
+        <span className="font-mono">Made with Go 🐹 + AI & Data</span>
       </div>
     </footer>
   );
