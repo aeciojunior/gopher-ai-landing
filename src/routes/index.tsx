@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import heroImage from "@/assets/hero-gopher.jpg";
 import gopherIcon from "@/assets/gopher-icon.png";
+import instructorPhoto from "@/assets/instructor.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -306,7 +307,7 @@ function Instructor() {
           <div className="relative grid md:grid-cols-[180px_1fr] gap-8 items-center">
             <div className="relative">
               <div className="absolute inset-0 rounded-full bg-primary/30 blur-2xl" />
-              <img src={gopherIcon} alt="Instrutor" width={180} height={180} className="relative w-44 h-44 rounded-full border-2 border-primary/50 bg-secondary p-4" />
+              <img src={instructorPhoto} alt="Aécio Junior" width={176} height={176} className="relative w-44 h-44 rounded-full object-cover object-center border-2 border-primary/50" />
             </div>
             <div>
               <div className="text-xs font-mono uppercase tracking-widest text-accent mb-2">// instrutor</div>
