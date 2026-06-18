@@ -536,7 +536,7 @@ function Enroll() {
                 <div className="text-sm text-muted-foreground mt-1">em até 12x de R$ 124,75 sem juros no cartão</div>
               </div>
               <ul className="mt-8 space-y-3 text-sm">
-                {["7 dias de garantia incondicional", "Acesso liberado em até 5 min", "Suporte humano via WhatsApp"].map((b) => (
+                {["7 dias de garantia incondicional", "Aulas ao vivo / Hands-On", "Suporte humano via WhatsApp"].map((b) => (
                   <li key={b} className="flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-accent" />{b}</li>
                 ))}
               </ul>
