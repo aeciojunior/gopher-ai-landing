@@ -76,7 +76,7 @@ function Hero() {
         <div>
           <div className="inline-flex items-center gap-2 rounded-full glass px-4 py-1.5 text-xs font-mono mb-6">
             <span className="w-2 h-2 rounded-full bg-accent animate-pulse-glow" />
-            Turma 02 · Inscrições abertas até 30/06
+            Encontros ao vivo e imersivos · Início 01/08/2026
           </div>
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05]">
             <span className="text-gradient">Go AI Developer</span>
@@ -485,9 +485,9 @@ function FAQ() {
   const faqs = [
     { q: "Preciso saber Go antes?", a: "Não. O módulo 01 cobre fundamentos do zero, desde sintaxe até concorrência idiomática. Recomendamos apenas lógica de programação e SQL básico." },
     { q: "Preciso saber IA ou Engenharia de Dados?", a: "Também não. Você aprende na prática tanto LLMs, embeddings, RAG e agentes quanto Kafka, ClickHouse, Iceberg e Airflow — do essencial ao avançado." },
-    { q: "Qual a carga horária e a duração?", a: "São 130h+ distribuídas em 12 módulos. Cerca de 12 semanas no ritmo guiado (plano Pro) ou no seu próprio ritmo (plano Starter)." },
-    { q: "As aulas são gravadas ou ao vivo?", a: "Conteúdo principal gravado em alta qualidade + encontros ao vivo semanais para tirar dúvidas. Tudo fica gravado e disponível." },
-    { q: "Por quanto tempo tenho acesso?", a: "Plano Starter: 1 ano. Plano Pro: vitalício, incluindo todas as atualizações futuras." },
+    { q: "Como funcionam os encontros?", a: "São 8 encontros ao vivo e imersivos, sempre aos sábados das 14h às 17h, de 01/08 a 19/09/2026 — 24h de imersão ao vivo, com prática hands-on e espaço para tirar dúvidas em tempo real." },
+    { q: "As aulas são gravadas ou ao vivo?", a: "Os encontros são 100% ao vivo e imersivos. Todos ficam gravados em alta qualidade para você revisar quando quiser, junto com os materiais de apoio." },
+    { q: "Vou ter acesso às gravações?", a: "Sim. Todos os encontros ao vivo ficam gravados e disponíveis para você revisar, junto com os materiais de apoio do curso." },
     { q: "O certificado é reconhecido?", a: "Sim. Certificado digital ao concluir 80% do curso, validável por link público e compatível com o LinkedIn." },
   ];
   return (
@@ -528,8 +528,9 @@ function Enroll() {
                 Garanta sua vaga <br /><span className="text-gradient">agora.</span>
               </h2>
               <p className="mt-4 text-muted-foreground">
-                Vagas limitadas a <strong className="text-foreground">80 alunos</strong> para garantir a qualidade
-                da mentoria. Início em <strong className="text-foreground">15 de julho</strong>.
+                <strong className="text-foreground">Encontros ao vivo e imersivos</strong>, aos sábados das
+                14h às 17h. Vagas limitadas a <strong className="text-foreground">80 alunos</strong>. Início em{" "}
+                <strong className="text-foreground">1º de agosto de 2026</strong>.
               </p>
               <div className="mt-6 rounded-2xl border border-primary/40 p-5">
                 <div className="text-3xl font-display font-bold text-gradient">R$ 1.497,00</div>
