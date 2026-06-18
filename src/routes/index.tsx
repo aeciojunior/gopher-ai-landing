@@ -2,13 +2,13 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import {
   Brain, Rocket, Sparkles, Check, Star, Clock, Users, Trophy, Zap,
-  GraduationCap, Github, Linkedin, Twitter, Mail, ShieldCheck, CreditCard,
+  GraduationCap, Github, Mail, ShieldCheck, CreditCard,
   ChevronRight, Terminal, Bot, Database, Cpu, Server, Network, Workflow,
   Boxes, Layers, Activity,
 } from "lucide-react";
 import heroImage from "@/assets/hero-gopher.jpg";
 import gopherIcon from "@/assets/gopher-icon.png";
-import instructorPhoto from "@/assets/instructor.png";
+import instructorPhoto from "@/assets/instructor.webp";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -350,11 +350,6 @@ function Instructor() {
                   estratégica de negócios e sólida formação acadêmica — em Programação, Engenharia de Dados, Cloud
                   Computing, Inteligência Artificial e desenvolvimento de soluções modernas.
                 </p>
-              </div>
-              <div className="mt-5 flex gap-3">
-                <a href="#" aria-label="GitHub" className="w-9 h-9 rounded-lg bg-secondary border border-border flex items-center justify-center hover:bg-primary/20 transition"><Github className="w-4 h-4" /></a>
-                <a href="#" aria-label="LinkedIn" className="w-9 h-9 rounded-lg bg-secondary border border-border flex items-center justify-center hover:bg-primary/20 transition"><Linkedin className="w-4 h-4" /></a>
-                <a href="#" aria-label="Twitter" className="w-9 h-9 rounded-lg bg-secondary border border-border flex items-center justify-center hover:bg-primary/20 transition"><Twitter className="w-4 h-4" /></a>
               </div>
             </div>
           </div>
