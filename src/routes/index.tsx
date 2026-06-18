@@ -312,7 +312,15 @@ function Instructor() {
             <div>
               <div className="text-xs font-mono uppercase tracking-widest text-accent mb-2">// instrutor</div>
               <h2 className="text-3xl md:text-4xl font-bold">Aécio Junior</h2>
-              <p className="text-muted-foreground mt-1">Especialista em Gestão da Inovação Tecnológica · 25+ anos em TI · Pós em ML in Production (UFSCar)</p>
+              <p className="text-muted-foreground mt-1">25+ anos em Tecnologia da Informação · desde 1998</p>
+              <div className="mt-3 flex flex-wrap gap-2">
+                <span className="inline-flex items-center gap-1.5 rounded-full border border-primary/40 bg-primary/10 px-3 py-1.5 text-xs font-medium text-foreground">
+                  <GraduationCap className="w-3.5 h-3.5 text-accent" /> Pós-graduado em Gestão da Inovação Tecnológica
+                </span>
+                <span className="inline-flex items-center gap-1.5 rounded-full border border-primary/40 bg-primary/10 px-3 py-1.5 text-xs font-medium text-foreground">
+                  <GraduationCap className="w-3.5 h-3.5 text-accent" /> Pós-graduado em Machine Learning in Production · UFSCar
+                </span>
+              </div>
               <div className="mt-5 space-y-4 text-foreground/90 leading-relaxed">
                 <p>
                   Com mais de 25 anos de experiência em Tecnologia da Informação, atuando desde 1998 em projetos
@@ -320,7 +328,7 @@ function Instructor() {
                   prática de mercado e forte atuação na formação e desenvolvimento de profissionais de tecnologia.
                 </p>
                 <p>
-                  Graduado em Sistemas de Informação e pós-graduando em Machine Learning in Production pela
+                  Graduado em Sistemas de Informação e pós-graduado em Machine Learning in Production pela
                   Universidade Federal de São Carlos (UFSCar), possui ampla experiência no desenvolvimento de
                   soluções escaláveis em Cloud, Engenharia de Dados, Analytics, Inteligência Artificial e
                   Arquitetura de Sistemas.
