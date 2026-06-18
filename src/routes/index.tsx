@@ -514,8 +514,7 @@ function FAQ() {
 }
 
 function Enroll() {
-  // TODO: trocar pelo link real do evento na Sympla quando publicado.
-  const symplaUrl = "https://www.sympla.com.br/evento/go-ai-developer-bootcamp-ao-vivo/0000000";
+  const symplaUrl = "https://www.sympla.com.br/evento-online/ia-e-dados-com-go----ao-vivo---construa-ia-e-dados-de-verdade/3470670";
 
   return (
     <section id="inscricao" className="py-24 relative">
